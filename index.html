@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=DM+Serif+Display&family=Exo+2&family=Jost&family=Montserrat:wght@200;400;500;800;900&family=Pacifico&family=Poppins:wght@400;700&family=Teko&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+<div class="back w-75 m-auto shadow p-5 my-5 rounded bg-dark">
+    <h1 class="text-center fw-bolder">Bookmarker</h1>
+    <h1 class="text-center fw-bolder">Bookmarker</h1>
+    <label for="nameInput" class=" mt-4">Site Name</label>
+    <input type="text" onblur="validationName()" class="form-control mb-3" id="nameInput"  name="nameInput" placeholder="Bookmark Name" />
+    <div id="vai" class="alert alert-danger d-none" role="alert" >
+        A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+      </div>
+    <label for="URLInput">Site URL</label>
+    <input type="text" onblur="validationUrl()" class="form-control mb-3" id="URLInput"  name="URLInput" placeholder="Website URL"/>
+    <div id="va" class="alert alert-danger d-none" role="alert" >
+        A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+      </div>
+      <div class="text-center">
+    <button class="btn but px-5 " onclick="creatProduct()">submit</button></div>
+</div>
+<input onkeyup="search()" type="text" class="sec form-control w-50 m-auto shadow border-dark  text-dark" id="searchInput" placeholder="search..."/>
+<div class="table-responsive w-75 m-auto my-5">
+    <table class="table table-hover table-dark shadow  ">
+        <thead class="text-center">
+                <th>#</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+        </thead>
+        <tbody id="tableBody" class="text-center">
+        </tbody>
+    </table>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
